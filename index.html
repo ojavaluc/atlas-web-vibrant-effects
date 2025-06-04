@@ -1,24 +1,364 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>atlas-web-vibrant-effects</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="atlas-web-vibrant-effects" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <title>Atlas Web - Soluções Digitais Inovadoras</title>
+    <meta name="description" content="Atlas Web - Criamos soluções digitais inovadoras para seu negócio. Desenvolvimento web, design e estratégia digital." />
+    <meta name="author" content="Atlas Web" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles.css">
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">ATLAS</span>
+          <span class="logo-accent">WEB</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Início</a></li>
+          <li><a href="#services" class="nav-link">Serviços</a></li>
+          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li><a href="#contact" class="nav-link">Contato</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="geometric-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+        </div>
+        <div class="particles" id="particles"></div>
+      </div>
+      
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">Transformamos</span>
+          <span class="title-line title-accent">Ideias</span>
+          <span class="title-line">em Realidade Digital</span>
+        </h1>
+        <p class="hero-subtitle">
+          Criamos experiências digitais únicas que elevam seu negócio ao próximo nível
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToSection('services')">
+            Nossos Serviços
+          </button>
+          <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+            Fale Conosco
+          </button>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Role para descobrir</span>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="section-subtitle">Soluções completas para sua presença digital</p>
+        
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-delay="0">
+            <div class="service-icon">
+              <div class="icon-bg"></div>
+              <span>🌐</span>
+            </div>
+            <h3>Desenvolvimento Web</h3>
+            <p>Sites responsivos e aplicações web modernas com as melhores tecnologias do mercado.</p>
+            <ul class="service-features">
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>React, Vue.js, Angular</li>
+              <li>WordPress, Shopify</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-delay="200">
+            <div class="service-icon">
+              <div class="icon-bg"></div>
+              <span>🎨</span>
+            </div>
+            <h3>Design Digital</h3>
+            <p>Criamos identidades visuais marcantes e interfaces que convertem visitantes em clientes.</p>
+            <ul class="service-features">
+              <li>UI/UX Design</li>
+              <li>Identidade Visual</li>
+              <li>Prototipagem</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-delay="400">
+            <div class="service-icon">
+              <div class="icon-bg"></div>
+              <span>📱</span>
+            </div>
+            <h3>Apps Mobile</h3>
+            <p>Aplicativos nativos e híbridos para iOS e Android com performance superior.</p>
+            <ul class="service-features">
+              <li>React Native</li>
+              <li>Flutter</li>
+              <li>PWA</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-delay="600">
+            <div class="service-icon">
+              <div class="icon-bg"></div>
+              <span>🚀</span>
+            </div>
+            <h3>Marketing Digital</h3>
+            <p>Estratégias completas para aumentar sua visibilidade e gerar mais leads qualificados.</p>
+            <ul class="service-features">
+              <li>SEO/SEM</li>
+              <li>Social Media</li>
+              <li>Google Ads</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <h2 class="section-title">Sobre a Atlas Web</h2>
+            <p class="about-description">
+              Somos uma empresa especializada em soluções digitais inovadoras, com foco em 
+              criar experiências únicas que impulsionam o crescimento dos nossos clientes.
+            </p>
+            <p class="about-description">
+              Nossa equipe combina criatividade, tecnologia e estratégia para entregar 
+              projetos que superam expectativas e geram resultados reais.
+            </p>
+            
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number" data-target="150">0</span>
+                <span class="stat-label">Projetos Concluídos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="98">0</span>
+                <span class="stat-label">% Satisfação</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="5">0</span>
+                <span class="stat-label">Anos de Experiência</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-visual" data-aos="fade-left">
+            <div class="visual-container">
+              <div class="floating-card card-1">
+                <h4>Inovação</h4>
+                <p>Sempre à frente das tendências</p>
+              </div>
+              <div class="floating-card card-2">
+                <h4>Qualidade</h4>
+                <p>Excelência em cada detalhe</p>
+              </div>
+              <div class="floating-card card-3">
+                <h4>Resultados</h4>
+                <p>Foco no sucesso do cliente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="section-title">Nosso Portfólio</h2>
+        <p class="section-subtitle">Alguns dos nossos projetos mais recentes</p>
+        
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <div class="placeholder-image">
+                <span>E-commerce</span>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Loja Virtual Premium</h3>
+                <p>Desenvolvimento completo de e-commerce</p>
+                <button class="view-project">Ver Projeto</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="mobile">
+            <div class="portfolio-image">
+              <div class="placeholder-image">
+                <span>App Mobile</span>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>App de Delivery</h3>
+                <p>Aplicativo nativo para delivery</p>
+                <button class="view-project">Ver Projeto</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="design">
+            <div class="portfolio-image">
+              <div class="placeholder-image">
+                <span>Branding</span>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Identidade Visual</h3>
+                <p>Criação de marca completa</p>
+                <button class="view-project">Ver Projeto</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <div class="placeholder-image">
+                <span>Website</span>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Site Corporativo</h3>
+                <p>Website institucional responsivo</p>
+                <button class="view-project">Ver Projeto</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">Vamos transformar sua ideia em realidade</p>
+        
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p>contato@atlasweb.com.br</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div>
+                <h4>Telefone</h4>
+                <p>(11) 99999-9999</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Localização</h4>
+                <p>São Paulo, SP</p>
+              </div>
+            </div>
+          </div>
+          
+          <form class="contact-form" data-aos="fade-left">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Seu Nome</label>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Seu Email</label>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" required>
+              <label for="subject">Assunto</label>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">Sua Mensagem</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary full-width">
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-text">ATLAS</span>
+              <span class="logo-accent">WEB</span>
+            </div>
+            <p>Transformando ideias em realidade digital</p>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#home">Início</a></li>
+              <li><a href="#services">Serviços</a></li>
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-social">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2024 Atlas Web. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/src/script.js"></script>
   </body>
 </html>
